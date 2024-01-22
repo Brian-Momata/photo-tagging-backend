@@ -18,9 +18,9 @@ class Api::CharactersController < ApplicationController
     selected_character_coords = character_coords[selected_character]
 
     if character_within_box?(selected_character_coords, box_coords)
-      render json: { result: 'Character is within the box' }
+      render json: { message: 'You found the character!' }
     else
-      render json: { result: 'Character is outside the box' }
+      render json: { message: 'You need to eat more carrots' }
     end
   end
 
