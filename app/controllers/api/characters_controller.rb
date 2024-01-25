@@ -1,5 +1,5 @@
 class Api::CharactersController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:tagging, :calculate_character_coords]
+  skip_before_action :verify_authenticity_token, only: [:tagging]
 
   CHARACTERS = {
     'Washington Carver' => { ratio: [7.75, 64.90], coords: [] },
